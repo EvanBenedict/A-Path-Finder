@@ -132,7 +132,7 @@ public class PathApp {
 				current = open.get(0);
 			else {
 				JOptionPane.showMessageDialog(null, "No Path Found", "Erroe", JOptionPane.ERROR_MESSAGE, null);
-				break;
+				return;
 			}
 			open.remove(0);
 			closed.add(current);
@@ -140,7 +140,6 @@ public class PathApp {
 			//exits if a path is found
 			if (current.isEnd()) {
 				pathFound = true;
-				System.out.println("Path found");
 				return;
 			}
 			
